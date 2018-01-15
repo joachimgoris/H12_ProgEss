@@ -1,17 +1,17 @@
 package be.pxl.h12.oef3;
 
+import java.time.LocalDate;
+
 public class Huwelijk {
 	private Persoon p1 = new Persoon();
 	private Persoon p2 = new Persoon();
-	private Datum d1 = new Datum();
+	public LocalDate d1;
 	
 	public Huwelijk(Persoon p, Persoon p3, int d, int m, int j) {
 		p1 = p;
 		p3.setAdres(p.getAdres());
 		p2 = p3;
-		d1.setDag(d);
-		d1.setMaand(m);
-		d1.setJaar(j);
+		d1 = new LocalDate(j, m, d);
 		System.out.println(p1.toString()+" en "+p2.toString()+" zijn gehuwd op "+d1.toString());
 	}
 	
@@ -21,7 +21,7 @@ public class Huwelijk {
 	public Persoon getP2() {
 		return p2;
 	}
-	public Datum getDatum() {
+	public LocalDate getDatum() {
 		return d1;
 	}
 	
@@ -38,6 +38,12 @@ public class Huwelijk {
 	
 	public String print() {
 		String retvalue = p1.toString()+"\n\n"+p2.toString()+"\n\nhet huwelijk vond plaats op "+this.getDatum().toString();
+		return retvalue;
+	}
+	
+	public String printDatum(LocalDate datum) {
+		String retvalue;
+		
 		return retvalue;
 	}
 

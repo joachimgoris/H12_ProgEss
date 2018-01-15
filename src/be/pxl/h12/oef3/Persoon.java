@@ -1,16 +1,18 @@
 package be.pxl.h12.oef3;
 
+import java.time.LocalDate;
+
 public class Persoon {
 	private String Naam;
 	private String Voornaam;
-	private Datum Geboortedatum;
+	public LocalDate Geboortedatum;
 	private Adres Adres;
 	
 	public Persoon() {
-		this("Aerts","Jef",new Datum(29,11,1990),new Adres("lindestraat","23D",3500,"Hasselt"));
+		this("Aerts","Jef",new LocalDate(29,11,1990),new Adres("lindestraat","23D",3500,"Hasselt"));
 	}
 	
-	public Persoon(String naam, String voornaam, Datum geboortedatum, Adres adres) {
+	public Persoon(String naam, String voornaam, LocalDate geboortedatum, Adres adres) {
 		setNaam(naam);
 		setVoornaam(voornaam);
 		setGeboortedatum(geboortedatum);
@@ -30,10 +32,10 @@ public class Persoon {
 	public void setVoornaam(String voornaam) {
 		Voornaam = voornaam;
 	}
-	public Datum getGeboortedatum() {
+	public LocalDate getGeboortedatum() {
 		return Geboortedatum;
 	}
-	public void setGeboortedatum(Datum geboortedatum) {
+	public void setGeboortedatum(LocalDate geboortedatum) {
 		Geboortedatum = geboortedatum;
 	}
 	public Adres getAdres() {
