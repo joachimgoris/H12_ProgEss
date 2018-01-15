@@ -59,20 +59,14 @@ public class Program {
 
 			if (object instanceof Float || object instanceof Double) {
 				if (object instanceof Float) {
-					String str = "";
-					str = object.toString().substring(0, object.toString().indexOf('.'));
-					double v = Double.valueOf(str);
-					str = object.toString().substring(object.toString().indexOf('.'));
-					double n = Double.valueOf(str);
+					double v = object.toString().substring(0, object.toString().indexOf('.')).length();
+					double n = object.toString().substring(object.toString().indexOf('.')).length();
 					System.out.println(object + " is een float en het aantal cijfers voor de komma " + v
 							+ " en het aantal cijfers na de komma " + n);
 				}
 				if (object instanceof Double) {
-					String str = "";
-					str = object.toString().substring(0, object.toString().indexOf('.'));
-					double v = Double.valueOf(str);
-					str = object.toString().substring(object.toString().indexOf('.'));
-					double n = Double.valueOf(str);
+					double v = object.toString().substring(0, object.toString().indexOf('.')).length();
+					double n = object.toString().substring(object.toString().indexOf('.')).length();
 					System.out.println(object + " is een double en het aantal cijers voor de komma " + v
 							+ " en het aantal cijfers na de komma " + n);
 				}
