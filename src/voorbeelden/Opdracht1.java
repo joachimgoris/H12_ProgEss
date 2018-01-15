@@ -14,6 +14,7 @@ public class Opdracht1 {
 		i +=5;
 		System.out.println(Integer.toBinaryString(i));
 		System.out.println(i.byteValue());
+		input.close();
 	}
 
 }
